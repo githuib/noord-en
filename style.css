@@ -386,6 +386,10 @@ html {
   padding: 5px 0;
 }
 
+img.logo-tablet {
+  display: none;
+}
+
 .site-content {
   padding: 20px;
 }
@@ -403,14 +407,15 @@ html {
   }
 
   .header-block {
-    float: left;
-    position: relative;
-    height: 130px;
     padding: 5px;
   }
 
-  .header-block.logo {
-    position: relative;
+  img.logo-desktop {
+    display: none;
+  }
+
+  img.logo-tablet {
+    display: block;
   }
 }
 
@@ -438,6 +443,7 @@ html {
   .site-branding-mobile > div {
     color: #ffffff;
     height: 24px;
+    font-weight: bold;
   }
 
   .header-block.logo {
@@ -640,7 +646,7 @@ a:active {
 }
 
 .main-navigation button {
-	width: 120px;
+	width: 130px;
 	position: relative;
 }
 .main-navigation button:after {
