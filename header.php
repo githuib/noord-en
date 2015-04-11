@@ -62,6 +62,7 @@ body {
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<!-- <?php bloginfo( 'name' ); ?> -->
 							<img src="<?php bloginfo('template_directory'); ?>/images/logo.png">
+                          <!--<div class="logo-image"></div>-->
 						</a>
 					<!-- <h1 class="site-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -71,6 +72,10 @@ body {
 					</h1> -->
 					<!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
 				</div><!-- .site-branding -->
+                <div class="site-branding-mobile">
+                  <div>NOORD &</div>
+                  <div><?php echo get_the_title(); ?></div>
+              </div>
 			</div>
 
 			<div class="header-block nav">
