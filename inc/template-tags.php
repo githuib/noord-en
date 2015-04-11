@@ -84,15 +84,18 @@ function noord_en_posted_on() {
 
 	$posted_on = sprintf(
 		_x( 'Geplaatst op %s', 'post date', 'noord-en' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+//		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+        '<strong>' . $time_string . '</strong>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'noord-en' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		_x( 'door %s', 'post author', 'noord-en' ),
+		//'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+        '<strong>' . esc_html( get_the_author() ) . '</strong>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+//	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span>';
 
 }
 endif;
