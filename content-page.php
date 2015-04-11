@@ -12,7 +12,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <?php if ( $category_name == 'Programma' ) : ?>
+  <?php if ( $category_name == 'Programma' || $category_name == 'Archief' ) : ?>
   <div class="entry-image">
     <?php
       $images = rwmb_meta( 'noord_en_image', 'type=image' ); //&size=YOURSIZE
@@ -27,32 +27,41 @@
   <div class="entry-text">
     <header class="entry-header">
       <?php if ( 'post' == get_post_type() ) : ?>
+
       <?php if ( $category_name == 'Nieuws' ) : ?>
-      <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
       <div class="entry-meta">
         <?php noord_en_posted_on(); ?>
       </div>
-      <?php elseif ( $category_name == 'Programma' ) : ?>
+      <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+      <?php elseif ( $category_name == 'Programma' || $category_name == 'Archief' ) : ?>
+
       <div class="entry-info">
         <div class="entry-when">
           <?php echo mysql2date( 'j F Y, H:i', rwmb_meta( 'noord_en_when' ) ); ?>
         </div>
+
+        <?php if ( $category_name == 'Programma' ) : ?>
         <div class="entry-price">
           <?php
             $price = rwmb_meta( 'noord_en_price' );
             echo $price == 0.0 ? 'Gratis!' : 'Deelname: € ' . number_format( $price, 2, ',', ' ' );
           ?>
         </div>
+        <?php endif; ?>
+
       </div>
+
       <?php endif; ?>
+
       <?php endif; ?>
     </header><!-- .entry-header -->
 
     <div class="entry-content">
       <?php the_content(); ?>
 
-      <?php if ( $category_name == 'Programma' ) : ?>
+      <?php if ( $category_name == 'Programma' || $category_name == 'Archief' ) : ?>
       <div class="entry-pictures">
         <?php
           $rel = rand();
