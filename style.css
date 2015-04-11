@@ -419,7 +419,7 @@ img.logo-tablet {
   }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 599px) {
   .page {
     padding-top: 68px;
   }
@@ -738,7 +738,7 @@ a:active {
 	}
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 599px) {
 	.main-navigation {
       border-radius: 7px;
       border-width: 2px;
@@ -926,7 +926,7 @@ a:active {
   margin-right: 15px;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 599px) {
   .entry-info {
     position: inherit;
   }
@@ -983,7 +983,7 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 599px) {
   .header-block.nav {
     float: right;
   }

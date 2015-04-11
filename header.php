@@ -39,7 +39,7 @@ body {
 	background-color: <?php echo $color2; ?>;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 599px) {
 	.main-navigation {
 		background-color: <?php echo $color2; ?>;
 		border-color: <?php echo $color1; ?>;
